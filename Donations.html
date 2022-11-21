@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.main{
+  width:330px;
+  height:330px;
+  border:1px solid blue;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:#1a8cff;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 2s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+ 
+.circle1 {
+      border-radius: 50%;
+      background-color: #1a8cff;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+  	top:0; bottom:0; left:0;right:0;
+  	margin:auto;
+      opacity: 0;
+	animation: scaleIn 2s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+ 
+    .item {
+      z-index: 100;
+      padding: 5px;
+    }
+ 
+    .item img {
+      width: 150px;
+    }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+  background-image:url('Love.gif');
+  background-repeat: 1000;
+  background-size:100%;
+}
+
+.header{
+	padding: 20px;
+  	text-align: center;
+	font-size:40px;
+	background: #00004d;
+	color:white;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: #000033;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+   background-color: black;
+   padding: 25px;
+   margin-top: 20px;
+	color:white;
+}
+
+.card1 {
+   background-color: black;
+   padding: 20px;
+   margin-top: 20px;
+   color:white;
+   text-align:center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #00004d;
+  margin-top: 20px;
+	color:white;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  background: #0066ff center;
+  box-shadow: 0 0 10px #33ccff;
+  outline: none;
+  transition: background 0.5s;
+}
+button:hover {
+  background: aqua radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+button:active {
+  background-color: #80b3ff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.center{
+	font-size:25px;
+	margin: 0;
+  	position: absolute;
+  	top: 20%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.cardcent{
+   background-color: black;
+   padding: 20px;
+   margin-top: 20px;
+   color:white;
+   text-align:center;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <h2>DONATIONS</h2>
+	<a href="Home.html">
+            <button>Home</button>
+      </a>
+</div>
+
+<div class="cardcent">
+	<p>Please refraining from donating yet, we are working on making it available :-)</p>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Personal Details</h2>
+      <h5>We need some of your details before we can process your request.</h5>
+      <p>This data is only for verification purpose.</p>
+      <div class="fakeimg" style="height:100px;">All details you enter here are completely confidential and between us only. We do not sell any personal information to any sort of third party. Your data security is our top priority.</div>
+    </div>
+    <div class="card1">
+    		<p>Enter your full name -
+	         <input type "text" placeholder="John Roe" required class="name">
+		    </p>
+
+		<p>Enter a valid email -
+                <input type ="email" placeholder="XYZ@gmail.com" required class="name">
+                </p>
+
+		<p>In-game username -
+                <input type ="text" placeholder="OutstandingOggy" required class="name">
+                </p>
+
+		<p>Date of Birth - 
+              <input type="text" placeholder="DD" class="dob">
+                <input type="text" placeholder="MM" class="dob">
+                  <input type="text" placeholder="YYYY" class="dob"></p>
+		<a href="https://buy.stripe.com/test_5kA17dfJBgGc0W47ss">
+		<button type="submit">Donate</button>
+		</a>
+
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Your Suggestions</h2>
+      <p>Send us your opinion about the game and its interface.<br>Let us know how we can make it better for you. :-)</p>
+      <textarea name="paragraph_text" cols="30" rows="10" placeholder="The website is not really child friendly, maybe allow a toogle switch to change theme."></textarea><br>
+		<button type="button" onclick="pop()"><p><a href="mailto:uv8517@gmail.com">Submit</a></p></button>
+    </div>
+    <div class="card">
+      <h3>Want to be a moderator?</h3>
+      <p>We are looking for moderators to help us manage the website interface better.<br>
+		You can let us know how you can help us improve, and we will reach out to you soon.<br></p>
+    	<textarea name="paragraph_text" cols="30" rows="10" placeholder="Hi, my name is XYZ. I can help with Javascript (FrontEnd). I have very good experience with cloud integration (BackEnd). My FullStack Development skills can be handy."></textarea><br>
+		<button type="button" onclick="pop()"><p><a href="mailto:uv8517@gmail.com">Apply</a></p></button>
+	</div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Thank you for trying to help us out with donations :-)</h2>
+</div>
+
+<script>
+
+function pop() {
+	alert("Thank you for your interest, please follow the next steps so we can get back to you ASAP :)");
+}
+
+</script>
+
+</body>
+</html>

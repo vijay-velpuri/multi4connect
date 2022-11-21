@@ -1,0 +1,325 @@
+<html>
+
+<style>
+
+body {
+    text-align:center;
+    font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+button,table,#game,body,td {
+    margin: 40px auto 0 auto;
+    background-image:url('4PBack.gif');
+	background-repeat:no-repeat;
+	background-size:200%;
+}
+
+#game,#gameboard {
+    width:600px;
+	font-size: 20px;
+	color:#b30000;
+}
+
+#gameboard,.leg {
+    background:black;
+}
+
+#gameboard,.leg,#gameboard td,#r {
+    border:2px solid #b30000;  		
+}
+#gameboard td {
+    width:60px;
+    height:60px;
+    border-radius:35px;			
+}
+
+#gameboard {
+    padding:10px;
+    border-spacing:5px;
+    border-bottom-width:0;
+    border-radius:12px 12px 0 0;
+}
+
+#gameboard .red {
+    background:#f00;
+}
+
+#gameboard .yellow {
+    background:#ff0;
+}
+
+#gameboard .pink {
+    background:#ff00ff;
+}
+
+#gameboard .green {
+    background:lime;
+}
+
+#r,#gameboard td {
+    border-color:#b30000;
+	color:white;
+}
+
+.leg {
+    border-top-width:0;
+    height:100px;
+    width:30px;
+    border-radius:0 0 12px 12px;
+}
+
+.yellow,.red,.green,.pink,#gameboard,.leg {
+    box-shadow: inset 0 0 20px #b30000;
+}
+
+#n,#w,#a,#b,#p,#d {
+    display:none;
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  background: #e65c00 center;
+  box-shadow: 0 0 20px red;
+  outline: none;
+  transition: background 0.5s;
+}
+button:hover {
+  background: #ff471a radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+button:active {
+  background-color: #ff471a;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.center{
+	color:red;
+	font-size:50px;
+}
+
+</style>
+
+<body>
+
+<h1 class="center">Multi4Connect</h1>
+
+        <span id="a">red</span>
+        <span id="b">yellow</span>
+	  <span id="p">pink</span>
+	  <span id="d">green</span>
+	  <span id="n">Are you sure you want to start a new game?</span>
+		<button id="r">New game</button>
+		<a href="MainGamePage.html">
+            <button id="r">Select Game Mode</button>
+        	</a>
+	  <div align="center">
+		<audio controls autoplay loop>
+		<source src="SFP.mp3">
+		</audio>
+	  </div>
+	<div id="game">It's the <span id="c"></span>&nbsp;player's move.
+        <span id="w">The %s player won.
+Do you want to play a new game?</span>
+        
+            <table id="gameboard">
+                <tr>
+                    <td id="c-1-1"></td>
+                    <td id="c-1-2"></td>
+                    <td id="c-1-3"></td>
+                    <td id="c-1-4"></td>
+                    <td id="c-1-5"></td>
+                    <td id="c-1-6"></td>
+                    <td id="c-1-7"></td>
+			  <td id="c-1-8"></td>
+			  <td id="c-1-9"></td>
+                </tr>
+                <tr>
+                    <td id="c-2-1"></td>
+                    <td id="c-2-2"></td>
+                    <td id="c-2-3"></td>
+                    <td id="c-2-4"></td>
+                    <td id="c-2-5"></td>
+                    <td id="c-2-6"></td>
+                    <td id="c-2-7"></td>
+			  <td id="c-2-8"></td>
+			  <td id="c-2-9"></td>
+                </tr>
+                <tr>
+                    <td id="c-3-1"></td>
+                    <td id="c-3-2"></td>
+                    <td id="c-3-3"></td>
+                    <td id="c-3-4"></td>
+                    <td id="c-3-5"></td>
+                    <td id="c-3-6"></td>
+                    <td id="c-3-7"></td>
+			  <td id="c-3-8"></td>
+			  <td id="c-3-9"></td>
+                </tr>
+                <tr>
+                    <td id="c-4-1"></td>
+                    <td id="c-4-2"></td>
+                    <td id="c-4-3"></td>
+                    <td id="c-4-4"></td>
+                    <td id="c-4-5"></td>
+                    <td id="c-4-6"></td>
+                    <td id="c-4-7"></td>
+			  <td id="c-4-8"></td>
+			  <td id="c-4-9"></td>
+                </tr>
+                <tr>
+                    <td id="c-5-1"></td>
+                    <td id="c-5-2"></td>
+                    <td id="c-5-3"></td>
+                    <td id="c-5-4"></td>
+                    <td id="c-5-5"></td>
+                    <td id="c-5-6"></td>
+                    <td id="c-5-7"></td>
+			  <td id="c-5-8"></td>
+			  <td id="c-5-9"></td>
+                </tr>
+                <tr>
+                    <td id="c-6-1"></td>
+                    <td id="c-6-2"></td>
+                    <td id="c-6-3"></td>
+                    <td id="c-6-4"></td>
+                    <td id="c-6-5"></td>
+                    <td id="c-6-6"></td>
+                    <td id="c-6-7"></td>
+			  <td id="c-6-8"></td>
+			  <td id="c-6-9"></td>
+                </tr>
+                <tr>
+                    <td id="c-7-1"></td>
+                    <td id="c-7-2"></td>
+                    <td id="c-7-3"></td>
+                    <td id="c-7-4"></td>
+                    <td id="c-7-5"></td>
+                    <td id="c-7-6"></td>
+                    <td id="c-7-7"></td>
+			  <td id="c-7-8"></td>
+			  <td id="c-7-9"></td>
+                </tr>
+                <tr>
+                    <td id="c-8-1"></td>
+                    <td id="c-8-2"></td>
+                    <td id="c-8-3"></td>
+                    <td id="c-8-4"></td>
+                    <td id="c-8-5"></td>
+                    <td id="c-8-6"></td>
+                    <td id="c-8-7"></td>
+			  <td id="c-8-8"></td>
+			  <td id="c-8-9"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+
+<script>
+
+(function(doc){
+    var                      
+    start = function(){
+        finished = false;
+        changePlayer();
+    },  		
+    newGame = function(message){
+        if (confirm(message)){
+            start();
+            forAllCells(emptyField);
+        }
+    },        
+    element = function(id){
+        return doc.getElementById(id);
+    },
+    value = function(el){
+        return element(el).innerHTML;
+    },                        
+    cell = function(i,j){
+        return element("c-"+i+"-"+j);
+    },       
+    forAllCells = function(action){
+        for (var t = 1;t<9;t++){
+            for (var counter2 = 1;counter2<10;counter2++){
+                action(t,counter2);
+            }
+        }
+    },                     
+    sameColor = function(i,j){
+        return testClass(i,j,players[current]);
+    },                        
+    changePlayer = function(){
+        element("c").innerHTML = players[current = (current + 1) % 4];
+    },                           
+    horizontalWon = function(i,j){
+        for(var min=j-1;min>0;min--)if(!sameColor(i,min))break;					
+        for(var max=j+1;max<10;max++)if(!sameColor(i,max))break;
+        return max-min>4;
+    },
+                                
+    verticalWon = function(i,j){
+        for(var max=i+1;max<9;max++)if(!sameColor(max,j))break;
+        return max-i>3;
+    },                        
+    diagonalLtrWon = function(i,j){
+        for(var min=i-1,t=j-1;min>0;min--,t--)if(t<1||!sameColor(min,t))break;
+        for(var max=i+1,t=j+1;max<9;max++,t++)if(t>9||!sameColor(max,t))break;
+        return max-min>4;
+    },                      
+    diagonalRtlWon = function(i,j){
+        for(var min=i-1,t=j+1;min>0;min--,t++)if(t>9||!sameColor(min,t))break;
+        for(var max=i+1,t=j-1;max<9;max++,t--)if(t<1||!sameColor(max,t))break;
+        return max-min>4;
+    },         
+    colorField = function(i,j,color){
+        cell(i,j).className = color;
+    },                      
+    emptyField = function(i,j){
+        colorField(i,j,'');
+    },
+    testClass = function(i,j,value){
+        return cell(i,j).className == value;
+    },
+    addCellBehavior = function(i,j){
+        cell(i,j).onclick = function(j){
+            return function(){
+                if(!finished){
+                    for (var t = 8;t>0;t--){
+                        if(testClass(t,j,'')){
+                            colorField(t,j,players[current]);
+                            if(horizontalWon(t,j) || verticalWon(t,j) || diagonalLtrWon(t,j) || diagonalRtlWon(t,j)){
+                                finished = true;
+                                newGame(wonMessage.replace("%s",players[current]));
+                            } else {
+                                changePlayer();
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }(j);
+    },
+    players = [value("a"),value("b"),value("p"),value("d")],         
+    current = 0,
+    newGameMessage = value("n"),
+    wonMessage = value("w"),
+    finished;
+    start();
+    forAllCells(addCellBehavior);
+    element("r").onclick = function(){
+        newGame(newGameMessage)
+    };
+})(document);
+
+</script>
+
+
+</html>

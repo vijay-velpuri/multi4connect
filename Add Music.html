@@ -1,0 +1,279 @@
+<html>
+<div class="main1">
+ 	<div class="circle" style="animation-delay: 0s"></div>
+	<div class="circle" style="animation-delay: 0.5s"></div>
+	<div class="circle" style="animation-delay: 1s"></div>
+	<div class="circle" style="animation-delay: 1.5s"></div>
+	<div class="circle" style="animation-delay: 2s"></div>
+	<div class="circle" style="animation-delay: 2.5s"></div>
+	<div class="circle" style="animation-delay: 3s"></div>
+	<div class="circle" style="animation-delay: 3.5s"></div>
+</div>
+
+<div class="circle1" style="animation-delay: 0s"></div>
+<div class="circle1" style="animation-delay: 0.5s"></div>
+<div class="circle1" style="animation-delay: 1s"></div>
+<div class="circle1" style="animation-delay: 1.5s"></div>
+<div class="circle1" style="animation-delay: 2s"></div>
+<div class="circle1" style="animation-delay: 2.5s"></div>
+<div class="circle1" style="animation-delay: 3s"></div>
+
+<head>
+
+<style>
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+body{
+	background-image:url('BackMusic.gif');
+	background-repeat: no-repeat;
+	background-size:100%;
+	color: white;
+}
+
+.main1{
+  width:330px;
+  height:330px;
+  border:1px solid blue;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:#1a8cff;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 3.5s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+ 
+.circle1 {
+      border-radius: 50%;
+      background-color: #1a8cff;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+  	top:0; bottom:0; left:0;right:0;
+  	margin:auto;
+      opacity: 0;
+	animation: scaleIn 3s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background: #0052cc center;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  transition: background 0.5s;
+}
+
+button:hover {
+  background: #4d94ff radial-gradient(circle, transparent 1%, #4d94ff 1%) center/15000%;
+}
+
+button:active {
+  background-color: aqua;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+
+.loginmain
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+.center{
+	position:absolute;
+	top:15%;
+	left:50%;
+	text-align:center;
+	text-size:30px;
+	color:#003399;
+	transform:translate(-50%,-50%);
+}
+
+.top{
+	position:absolute;
+	top:5%;
+	left:50%;
+	text-align:center;
+	text-size:50px;
+	transform:translate(-50%,-50%);
+	color:#003399;
+}
+
+.auto
+{
+	text-size:50px;
+	color: #0099ff
+;
+}
+
+.down
+{
+	position:absolute;
+	top:48%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+.content1{
+position:absolute;
+	top:40%;
+	left:50%;
+	font-align:center;
+	font-size:15px;
+	transform:translate(-50%,-50%);
+}
+.content2{
+position:absolute;
+	top:50%;
+	left:50%;
+	font-align:center;
+	font-size:15px;
+	transform:translate(-50%,-50%);
+}
+.content3{
+	position:absolute;
+	top:60%;
+	left:50%;
+	font-align:center;
+	font-size:15px;
+	transform:translate(-50%,-50%);
+}
+
+.downer{
+	position:absolute;
+	top:80%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+</style>
+</head>
+
+<body>
+
+		<h1 class="top">The Musical Club</h1>
+		<h2 class="center">The one stop for all your <span class="auto"></span></h2>
+		<a href="https://accounts.spotify.com/en/login" target="_blank" rel="noopener noreferrer">
+		<button class="down">My Own Craze</button>
+		</a>
+		<a href="Home.html">
+            <button class="downer">Home</button>
+        	</a>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+var typed = new Typed(".auto",{
+	strings: ["Music...","Song...","Craze..."],
+	typeSpeed: 100,
+	backSpeed: 100,
+	loop: true
+})
+
+</script>
+
+</html>
+	

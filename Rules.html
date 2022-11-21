@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.main{
+  width:330px;
+  height:330px;
+  border:1px solid blue;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:#1a8cff;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 2s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+ 
+.circle1 {
+      border-radius: 50%;
+      background-color: #1a8cff;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+  	top:0; bottom:0; left:0;right:0;
+  	margin:auto;
+      opacity: 0;
+	animation: scaleIn 2s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+ 
+    .item {
+      z-index: 100;
+      padding: 5px;
+    }
+ 
+    .item img {
+      width: 150px;
+    }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+	background-color:#1a1a1a;
+   background-image:url('RuleBack.gif');
+	background-size:0.1%;
+	font-size:20px;
+}
+
+.header{
+	padding: 20px;
+  text-align: center;
+	font-size:40px;
+background: #00004d;
+	color:white;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.center{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+
+.fakeimg {
+  background-color: #000033;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+   background-color:black;
+   padding: 20px;
+   margin-top: 20px;
+	color:white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #00004d;
+  margin-top: 20px;
+	color:white;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  background: #0066ff center;
+  box-shadow: 0 0 10px #33ccff;
+  outline: none;
+  transition: background 0.5s;
+}
+button:hover {
+  background: aqua radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+button:active {
+  background-color: #80b3ff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+</style>
+
+</head>
+
+<body>
+	<h1 class="header">How to play Multi4Connect</h1>
+	<div class="card">
+		<ul>
+			<li>Select one of the following game modes:<br>
+				<ol>
+					<li>Play against CPU</li>
+					<li>2 players</li>
+					<li>4 players</li>
+					<li>6 players</li>
+					<li>8 players</li>
+				</ol>
+			</li><br>
+			<li>The objective of the game is to place coins of your colour on the board such that they connect horizontally, vertically or diagonally.</li><br>
+			<li>The game progresses in turns. Each player must wait for their turn in order to drop a coin of their colour on the board.</li><br>
+			<li>On your turn, click anywhere in a column to drop your coin in that column. The coin occupies the lowest available space in the column.</li><br>
+			<li>The game ends when a player connects <b>four</b> coins. The first player to do so is declared winner.</li><br>
+		</ul>
+	</div>
+	<a href="MainGamePage.html">
+		<button class="center">Play Multi4Connect</button>
+	</a>
+</body>
+
+</html>

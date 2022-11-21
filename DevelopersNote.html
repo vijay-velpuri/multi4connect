@@ -1,0 +1,285 @@
+<! DOCTYPE HTML>
+
+<title>Developer Note</title>
+
+<style>
+.downArrow{
+	position: fixed;
+	bottom: 10%;
+	left: 48.5%;
+}
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.i
+{
+	position:fixed;
+    bottom:0px;
+    left:50%;
+	width: 40;
+	height: 40;
+}
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+@keyframes outcome {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Nunito;
+}
+
+h1 {
+   font-size: 250%
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+.img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+}
+
+.cont01{
+	text-align:center;
+background-color:black;
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url('Top1.gif');
+  z-index:2;
+}
+
+#title h1 {
+ transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+
+}
+
+#slide1:before {
+  background-image: url('Concept.jpg');
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url('Innovate1.gif');
+  z-index:2;
+}
+
+#slide3:before {
+  background-image: url('Dice.jpg');
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background-image: url('FAQ1.gif');
+}
+
+	
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 26px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background: #1a1a1a center;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  transition: background 0.5s;
+}
+button:hover {
+  background: #737373 radial-gradient(circle, transparent 1%, #595959 1%) center/15000%;
+}
+button:active {
+  background-color: #cccccc;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+</style>
+
+<div id="title" class="slide header">
+  <h1>Developers Note</h1>
+	<div align="center">
+		<audio controls autoplay loop>
+			<source src="US.mp3">
+		</audio>
+	</div>
+
+	<div class="downArrow bounce">
+  <img class="i" src="Arrow.png">
+</div>
+</div>
+
+<div id="slide1" class="slide">
+  <div class="title">
+    <h1>The Concept</h1>
+    <p>'Connect 4' is a simple game. 2 players go head to head in a game of minds. Over the last few years, the game has become easier to master. In 'Multi4Connect' we use the same concept of 'Connect 4', but, the board generated will not be a simple square or rectangle. It can take any shape. Instead of just 2 players, we can have 2-8 players playing on a single board. Gravity will also be altered to make the game harder to master. </p>
+  </div>
+</div>
+
+<div id="slide2" class="slide">
+  <div class="title">
+    <h1>Prospects & Scope</h1>
+<p>Presently 'Connect 4' is not an online multiplayer game! This means there is no rating or a match-making or play-with-friends options. We look to make a rating system with leaderboards for the competitive players. In addition to this, we are also looking to build a causal game play so a group of friends connected through the internet can play just to have fun or to get better at the game.</p>  </div>
+  <img class = "img" src="c4.gif">
+  <img class = "img" src="2Player.jpg"> 
+</div>
+
+<div id="slide3" class="slide">
+  <div class="title">
+    <h1>About Us</h1>
+	<p>We are a team of innovative thinkers looking to optimize and make a game better. Our motive is simple "Discovery is better than Invention". We take simple games and make them better with some innovative ideas. We look for perfection with no expectation of revenue just yet. These games are completely free to play.</p>
+  </div>
+</div>
+
+<div id="slide4" class="slide header">
+    <h1>FAQ's Section</h1>
+</div>
+
+		<div class="cont01">
+        		<a href="MainGamePage.html">
+            		<button class="cme">Select Game Mode</button>
+        		</a>
+		</div>
+
+</html>

@@ -1,0 +1,312 @@
+<html>
+
+
+<style>
+
+
+body{
+  background-image: url('BackLand.gif');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.main{
+  width:330px;
+  height:330px;
+  border:1px solid blue;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:#1a8cff;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 2s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+ 
+.circle1 {
+      border-radius: 50%;
+      background-color: #1a8cff;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+  	top:0; bottom:0; left:0;right:0;
+  	margin:auto;
+      opacity: 0;
+	animation: scaleIn 2s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+ 
+    .item {
+      z-index: 100;
+      padding: 5px;
+    }
+ 
+    .item img {
+      width: 150px;
+    }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+.center{
+	font-size:25px;
+	margin: 0;
+  	position: absolute;
+  	top: 20%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.center_below{
+	margin: 0;
+	font-size: 20px;
+  	position: absolute;
+  	top: 80%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+span{
+	color:#3377ff;
+}
+
+.butn1
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 50%;
+  	left: 80%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn2
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 50%;
+  	left: 20%;
+  	transform: translate(-50%, -50%);
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: aqua;
+  background: #0000e6 center;
+  box-shadow: 0 0 20px blue;
+  outline: none;
+  transition: background 0.5s;
+}
+
+button:hover {
+  background: #3333ff radial-gradient(circle, transparent 1%, #80ccff 1%) center/15000%;
+}
+
+button:active {
+  background-color: #6666ff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+h1{
+	color:#3377ff;
+}
+
+h2{
+	color:white;
+}
+
+.cute{
+	position:absolute;
+	top:80%;
+	left:85%;
+	tranform:translate(-50%,-50%);
+}
+
+.cutext{
+	position:absolute;
+	top:70%;
+	left:75%;
+	tranform:translate(-50%,-50%);
+}
+
+img{
+	height: 130px;
+	width: 100px;
+}
+
+p{
+	font-size: 15px;
+	text-align: center;
+	color:white;
+}
+
+.smol{
+	padding: 7px 7px;
+	font-size: 12px;
+}
+
+.butntxt{
+	position:absolute;
+	top:80%;
+	left:80%;
+	tranform:translate(-50%,-50%);
+}
+
+</style>
+
+
+<title>Multi4Connect</title>
+
+<div align="center">
+		<audio controls autoplay loop>
+			<source src="TIMM.mp3">
+		</audio>
+</div>
+
+<div class="center">
+<h1>Multi4Connect</h1>
+</div>
+
+<div class="center_below">
+<h2 id="delay2">Loading <span class="ato"></span></h2>
+</div>
+
+<div class="center_below">
+<h2 id="delay1" style="visibility:hidden">The one stop for <span class="auto"></span></h2>
+</div>
+
+<div class="main">
+ 	<div class="circle" style="animation-delay: 0.3s"></div>
+	<div class="circle" style="animation-delay: 0.6s"></div>
+	<div class="circle" style="animation-delay: 1s"></div>
+	<div class="circle" style="animation-delay: 1.3s"></div>
+	<div class="circle" style="animation-delay: 1.6s"></div>
+	<div class="circle" style="animation-delay: 2s"></div>
+</div>
+
+	<div class="circle1" style="animation-delay: 0.2s"></div>
+	<div class="circle1" style="animation-delay: 0.6s"></div>
+	<div class="circle1" style="animation-delay: 1.2s"></div>
+	<div class="circle1" style="animation-delay: 2s"></div>
+
+<div class="butn1">
+        <a href="Home.html">
+            <button id="proc2" style="visibility:hidden">Tell Me More</button>
+        </a>
+</div>
+
+<div class="butn2">
+        <a href="MainGamePage.html">
+            <button id="proc1" style="visibility:hidden">Start Playing</button>
+        </a>
+</div>
+
+<script>
+
+window.onload = function(){
+  var theDelay = 2;
+  var timer = setTimeout("showText()",theDelay*1000)
+  var theDelay_1 = 4;
+  var timer_1 = setTimeout("showText_1()",theDelay_1*1000)
+  var theDelay_2 = 4;
+  var timer_2 = setTimeout("noText()",theDelay_2*1000)
+  var theDelay_3 = 5;
+  var timer_3 = setTimeout("image()",theDelay_3*1000)
+  var theDelay_4 = 5.5;
+  var timer_4 = setTimeout("text()",theDelay_4*1000)
+  var theDelay_5 = 5.5;
+  var timer_5 = setTimeout("txt1()",theDelay_5*1000)
+  var theDelay_6 = 5.5;
+  var timer_6 = setTimeout("txt2()",theDelay_6*1000)
+  var theDelay_7 = 4;
+  var timer_5 = setTimeout("but1()",theDelay_7*1000)
+  var theDelay_8 = 4;
+  var timer_6 = setTimeout("but2()",theDelay_8*1000)
+}
+function showText(){
+  document.getElementById("delay").style.visibility = "visible";
+}
+function showText_1(){
+  document.getElementById("delay1").style.visibility = "visible";
+}
+function noText(){
+  document.getElementById("delay2").style.visibility = "hidden";
+}
+function image(){
+  document.getElementById("delayl1").style.visibility = "visible";
+}
+function text(){
+  document.getElementById("delayl2").style.visibility = "visible";
+}
+function txt1(){
+  document.getElementById("delayl3").style.visibility = "visible";
+}
+function txt2(){
+  document.getElementById("delayl4").style.visibility = "visible";
+}
+function but1(){
+  document.getElementById("proc1").style.visibility = "visible";
+}
+function but2(){
+  document.getElementById("proc2").style.visibility = "visible";
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+var typed = new Typed(".auto",{
+	strings: ["Gaming","Music","Friends"],
+	typeSpeed: 100,
+	backSpeed: 100,
+	loop: true
+})
+
+var typed = new Typed(".ato",{
+	strings: ["Page..."],
+	typeSpeed: 125,
+})
+
+</script>
+
+</html>

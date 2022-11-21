@@ -1,0 +1,333 @@
+<html>
+
+<style>
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+body{
+	background-image: url('HomeBack.gif');
+	background-repeat: no-repeat;
+	background-size:100%;
+	color: white;
+}
+
+.main1{
+  width:330px;
+  height:330px;
+  border:1px solid blue;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:#1a8cff;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 3.5s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+ 
+.circle1 {
+      border-radius: 50%;
+      background-color: #1a8cff;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+  	top:0; bottom:0; left:0;right:0;
+  	margin:auto;
+      opacity: 0;
+	animation: scaleIn 3s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: aqua;
+  background: #0000e6 center;
+  box-shadow: 0 0 20px blue;
+  outline: none;
+  transition: background 0.5s;
+}
+
+button:hover {
+  background: #3333ff radial-gradient(circle, transparent 1%, #4d94ff 1%) center/15000%;
+}
+
+button:active {
+  background-color: #6666ff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.butn1
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 50%;
+  	left: 80%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn2
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 50%;
+  	left: 20%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn3
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 25%;
+  	left: 30%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn4
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 75%;
+  	left: 30%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn5
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 20%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn6
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 80%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn7
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 25%;
+  	left: 70%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn8
+{
+	margin: 0;
+	font-size: 15px;
+  	position: absolute;
+  	top: 75%;
+  	left: 70%;
+  	transform: translate(-50%, -50%);
+}
+
+.butn9
+{
+	margin: 0;
+	text-align: center;
+	font-size: 10px;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+
+</style>
+
+<div align="center">
+		<audio controls autoplay loop>
+			<source src="IMSM.mp3">
+		</audio>
+</div>
+
+<div id="main">
+	<a href="Global.html">
+  		<button class="openbtn" onclick="openNav()">Global Chat</button>  
+	</a>
+</div>
+
+
+<div class="main1">
+ 	<div class="circle" style="animation-delay: 0s"></div>
+	<div class="circle" style="animation-delay: 0.5s"></div>
+	<div class="circle" style="animation-delay: 1s"></div>
+	<div class="circle" style="animation-delay: 1.5s"></div>
+	<div class="circle" style="animation-delay: 2s"></div>
+	<div class="circle" style="animation-delay: 2.5s"></div>
+	<div class="circle" style="animation-delay: 3s"></div>
+	<div class="circle" style="animation-delay: 3.5s"></div>
+</div>
+
+<div class="circle1" style="animation-delay: 0s"></div>
+<div class="circle1" style="animation-delay: 0.5s"></div>
+<div class="circle1" style="animation-delay: 1s"></div>
+<div class="circle1" style="animation-delay: 1.5s"></div>
+<div class="circle1" style="animation-delay: 2s"></div>
+<div class="circle1" style="animation-delay: 2.5s"></div>
+<div class="circle1" style="animation-delay: 3s"></div>
+
+<div class="butn1">
+        <a href="DevelopersNote.html">
+            <button>Developers Note</button>
+        </a>
+</div>
+
+<div class="butn2">
+        <a href="MainGamePage.html">
+            <button>Select Game Mode</button>
+        </a>
+</div>
+
+<div class="butn3">
+        <a href="Rules.html">
+            <button>Know The Rules</button>
+        </a>
+</div>
+
+<div class="butn4">
+        <a href="Leaderboard.html">
+            <button>Leaderboards</button>
+        </a>
+</div>
+
+<div class="butn5">
+        <a href="Tournaments.html">
+            <button>Tournaments</button>
+        </a>
+</div>
+
+<div class="butn6">
+        <a href="Updates.html">
+            <button>Updates & Bugs</button>
+        </a>
+</div>
+
+<div class="butn7">
+        <a href="Donations.html">
+            <button>Donate To Us</button>
+        </a>
+</div>
+
+<div class="butn8">
+        <a href="Add Music.html">
+            <button>Your Music</button>
+        </a>
+</div>
+
+<div class="butn9">
+        <a href="Login Page.html">
+            <button>SignUp/Login</button>
+        </a>
+</div>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.main{
+  width:330px;
+  height:330px;
+  border:1px solid blue;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:#1a8cff;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 2s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+ 
+.circle1 {
+      border-radius: 50%;
+      background-color: #1a8cff;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+  	top:0; bottom:0; left:0;right:0;
+  	margin:auto;
+      opacity: 0;
+	animation: scaleIn 2s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+ 
+    .item {
+      z-index: 100;
+      padding: 5px;
+    }
+ 
+    .item img {
+      width: 150px;
+    }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+	background-color:#1a1a1a;
+	font-size:20px;
+}
+
+.header{
+	padding: 20px;
+  text-align: center;
+	font-size:40px;
+background: #00004d;
+	color:white;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: #000033;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+	background-color:black;
+   background-image:url('Gamer.gif');
+	background-size:0.05%;
+   padding: 50px;
+   margin-top: 20px;
+	color:black;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #00004d;
+  margin-top: 20px;
+	color:white;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  background: #0066ff center;
+  box-shadow: 0 0 10px #33ccff;
+  outline: none;
+  transition: background 0.5s;
+}
+button:hover {
+  background: aqua radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+button:active {
+  background-color: #80b3ff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.center{
+	text-align:center;
+}
+
+table{
+	border: 1px solid white;
+	border-collapse: collapse;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+td, tr{
+	padding:10px;
+	border: 1px solid white;
+	text-align:center;
+	color:white;
+}
+
+th{
+	font-size:20px;
+	color:white;
+}
+
+.center{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+</style>
+
+</head>
+
+<body>
+	<h1 class="header">Leaderboard</h1>
+	<div class="card">
+		<div class="center">
+		<table class="centerTable">
+			<tr>
+				<th>Rank</th>
+				<th>Username</th>
+				<th>Rating</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>SirenSammy</td>
+				<td>1530</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>BoomerBarry</td>
+				<td>1457</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>LibraryLarry</td>
+				<td>1449</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>AnxiousAndy</td>
+				<td>1446</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>TungstenTimmy</td>
+				<td>1438</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>GumballGabby</td>
+				<td>1429</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>NordicNoddy</td>
+				<td>1410</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>OutstandingOggy</td>
+				<td>1409</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>PlayfulPolly</td>
+				<td>1386</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Vamos</td>
+				<td>1341</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<a href="Home.html">
+            <button class="center">Home</button>
+	</a>
+	<div class="footer">Leaderboard is updated every month, play more and see you up here next month ;-)</div>
+</body>
+
+</html>

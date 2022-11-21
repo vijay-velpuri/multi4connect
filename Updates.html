@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.main{
+  width:330px;
+  height:330px;
+  border:1px solid blue;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:#1a8cff;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 2s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+ 
+.circle1 {
+      border-radius: 50%;
+      background-color: #1a8cff;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+  	top:0; bottom:0; left:0;right:0;
+  	margin:auto;
+      opacity: 0;
+	animation: scaleIn 2s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+ 
+    .item {
+      z-index: 100;
+      padding: 5px;
+    }
+ 
+    .item img {
+      width: 150px;
+    }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+	background-color:#1a1a1a;
+}
+
+.header{
+	padding: 20px;
+  text-align: center;
+	font-size:40px;
+background: #00004d;
+	color:white;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: #000033;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+   background-color: black;
+   padding: 20px;
+   margin-top: 20px;
+	color:white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #00004d;
+  margin-top: 20px;
+	color:white;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  background: #0066ff center;
+  box-shadow: 0 0 10px #33ccff;
+  outline: none;
+  transition: background 0.5s;
+}
+button:hover {
+  background: aqua radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+button:active {
+  background-color: #80b3ff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.center{
+	font-size:25px;
+	margin: 0;
+  	position: absolute;
+  	top: 20%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+</style>
+
+</head>
+<body>
+
+<div align="center">
+		<audio controls autoplay loop>
+			<source src="21R.mp3">
+		</audio>
+</div>
+
+<div class="header">
+  <h2>Multi4Connect This Month</h2>
+	<a href="Home.html">
+            <button>Home</button>
+      </a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Working on better functionality</h2>
+      <h5>The website is still developing for the better, Nov 14, 2022</h5>
+      <p>Sorry for all the bugs you find during the play.</p>
+      <div class="fakeimg" style="height:100px;">We are working mainly on the website functionality. Each button must do what they are destined to do. Every webpage must have uniform access and ease of usage. Before going live to the world, the main priority is to increase functionality to the best we possibly can.</div>
+    </div>
+    <div class="card">
+      <h2>Developing The BackEnd</h2>
+      <h5>Cloud & Database integration, Nov 14, 2022</h5>
+	<p>The website must be able to remember and restore information.</p>
+      <div class="fakeimg" style="height:100px;">Further prospects include integrating with cloud and database. This should allow users to maintain an account, remember and restore the information for both the user and our developer team. This will open more doors for prospects like 'in-app purchases' and more.</div>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Your Suggestions</h2>
+      <p>Send us your opinion about the game and its interface.<br>Let us know how we can make it better for you. :-)</p>
+      <textarea name="paragraph_text" cols="30" rows="10" placeholder="The website is not really child friendly, maybe allow a toogle switch to change theme."></textarea><br>
+
+		<button type="button" onclick="pop()"><p><a href="mailto:uv8517@gmail.com">Submit</a></p></button>
+
+	</div>
+    <div class="card">
+      <h3>Quick Overview of Agenda</h3>
+      <div class="fakeimg">Better accessibility and functionality.</div><br>
+      <div class="fakeimg">Account creation & maintanance.</div><br>
+    </div>
+    <div class="card">
+      <h3>Want to be a moderator?</h3>
+      <p>We are looking for moderators to help us manage the website interface better.<br>
+		You can let us know how you can help us become better and we will reach out to you soon.<br></p>
+    	<textarea name="paragraph_text" cols="30" rows="10" placeholder="Hi, my name is XYZ. I can help with Javascript (FrontEnd). I have very good experience with cloud integration (BackEnd). My FullStack Development skills can be handy."></textarea><br>
+
+		<button type="button" onclick="pop()"><p><a href="mailto:uv8517@gmail.com">Apply</a></p></button>
+
+	</div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Check out next month again for more updates ;-)</h2>
+</div>
+
+<script>
+
+function pop() {
+	alert("Thank you for your interest, please follow the next steps so we can get back to you ASAP :)");
+}
+
+</script>
+
+</body>
+</html>

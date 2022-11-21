@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Game Mode Selection</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'><link rel="stylesheet" href="./MainGamePage-Style.css">
+
+</head>
+
+<style>
+.cont01{
+	text-align:center;
+}
+h1 {
+  margin: 0 0 15px;
+  padding: 15px;
+  color: #3377ff;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+button {
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: aqua;
+  background: #0000e6 center;
+  box-shadow: 0 0 20px blue;
+  outline: none;
+  transition: background 0.5s;
+}
+
+button:hover {
+  background: #3333ff radial-gradient(circle, transparent 1%, #80ccff 1%) center/15000%;
+}
+
+button:active {
+  background-color: #6666ff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.smol
+{
+  font-size: 25px;
+  color: #fff;
+}
+</style>
+
+<div align="center">
+<audio controls autoplay loop>
+	<source src="MIMM.mp3">
+</audio>
+</div>
+
+<h1>Multi4Connect</h1>
+
+<div class="cont01">
+        <a href="Home.html">
+            <button>Home</button>
+        </a>
+</div>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="cont s--inactive">
+  <!-- cont inner start -->
+  <div class="cont__inner">
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">VS CPU</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Play against the CPU.<br><br><br></div>
+		<div class="smol">Presently, computer dominate humans in almost everything.<br>
+					This bot will try to at least hold a draw.<br>
+					Can you defend it? or better, call it a bluff?<br>
+					This is the best way to improve your skills for competitive matches.
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="cont01">
+        		<a href="VSCPU.html">
+            		<button>Play Against CPU</button>
+        		</a>
+		</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="el__index">
+        <div class="el__index-back">1</div>
+        <div class="el__index-front">
+          <div class="el__index-overlay" data-index="1">1</div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">2 Players</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">The Classic Connect 4.<br><br><br></div>
+		<div class="smol">
+			This is the classic 2-player 'connect 4' arena.<br>
+			Any disputes? Have a brawl over this mind game.<br>
+			You may no longer be friends after this fight. :P<br>
+			Invite your friend over and show off your skills playing each other.<br>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="cont01">
+        		<a href="2Player-Connect4.html">
+            		<button>Play 2-Player</button>
+        		</a>
+		</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="el__index">
+        <div class="el__index-back">2</div>
+        <div class="el__index-front">
+          <div class="el__index-overlay" data-index="2">2</div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">4 Players</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">Baby Steps Of Multi4Connect.<br><br><br></div>
+		<div class="smol">
+			So, you think you are ready to take on the Multi4Connect world?<br>
+			Tighten your seatbelts and get your mind sharpened. <br>
+			There can be multiple attacks from 4 players, so be sharp with your calculations.<br>
+			Invite your friends over and brawl in a 4-way championship.<br>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="cont01">
+        		<a href="4Player.html">
+            		<button>Play 4-Player</button>
+        		</a>
+		</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="el__index">
+        <div class="el__index-back">3</div>
+        <div class="el__index-front">
+          <div class="el__index-overlay" data-index="3">3</div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">6 Players</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">The brawl of 6 Minds.<br><br><br></div>
+		<div class="smol">
+			Let us make it up a notch, shall we?<br>
+			Having to calculate 6 moves each time and multiple lines. <br>
+			There can be multiple attacks from 6 players on a huge map, so be sharp with your calculations.<br>
+			Invite your friends over and brawl in a 6-way championship.<br>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="cont01">
+        		<a href="6Player.html">
+            		<button>Play 6-Player</button>
+        		</a>
+		</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="el__index">
+        <div class="el__index-back">4</div>
+        <div class="el__index-front">
+          <div class="el__index-overlay" data-index="4">4</div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+    <!-- el start -->
+    <div class="el">
+      <div class="el__overflow">
+        <div class="el__inner">
+          <div class="el__bg"></div>
+          <div class="el__preview-cont">
+            <h2 class="el__heading">8 Players</h2>
+          </div>
+          <div class="el__content">
+            <div class="el__text">The Ultimate Multi4Connect Mind.<br><br><br></div>
+		<div class="smol">
+			You must be really good or might have a lot of friends.<br>
+			Either way, welcome to what we at 'Multi4Connect' call "HELL".<br>
+			8 times more calculations with a mega-large map.<br>
+			If you can calculate and win with skill, then you have some insane 'pattern recognition skills'.<br>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="cont01">
+        		<a href="8Player.html">
+            		<button>Play HELL</button>
+        		</a>
+		</div>
+            <div class="el__close-btn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="el__index">
+        <div class="el__index-back">5</div>
+        <div class="el__index-front">
+          <div class="el__index-overlay" data-index="5">5</div>
+        </div>
+      </div>
+    </div>
+    <!-- el end -->
+  </div>
+  <!-- cont inner end -->
+</div>
+
+<!-- partial -->
+  <script  src="./MainGamePage-Script.js"></script>
+
+</body>
+</html>
